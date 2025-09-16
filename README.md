@@ -20,4 +20,35 @@ Mục tiêu:
 
 ---
 
-## 📂 Cấu trúc thư mục
+## 📂 Cấu trúc thư mục:
+data-lakehouse-fitness/
+│── data/
+│ ├── raw/ # Dữ liệu gốc (CSV)
+│ ├── processed/ # Dữ liệu đã xử lý (Parquet/Delta)
+│
+│── notebooks/ # Notebook Jupyter/PySpark cho EDA & demo
+│── scripts/ # ETL scripts (Python + PySpark)
+│── reports/ # Báo cáo, hình ảnh, kết quả
+│── requirements.txt # Danh sách thư viện Python
+│── README.md # Tài liệu mô tả dự án
+
+---
+
+## 🚀 Cách chạy (local)
+1. Clone repo:
+   ```bash
+   git clone https://github.com/duongpham1411/data-lakehouse-fitness.git
+   cd data-lakehouse-fitness
+2. Tạo môi trường ảo và cài thư viện:
+    python -m venv venv
+    source venv/bin/activate   # hoặc venv\Scripts\activate trên Windows
+    pip install -r requirements.txt
+3. Chạy PySpark để test ingestion: pyspark
+4. Mở notebook trong notebooks/ để khám phá dữ liệu.
+
+---
+
+## ✨ Kết quả dự kiến
+- Hệ thống Data Lakehouse cơ bản (batch data pipeline).
+- Dashboard hiển thị xu hướng và phân bố mức độ thể chất.
+- So sánh hiệu quả lưu trữ & truy vấn giữa dữ liệu CSV và Delta/Parquet.
