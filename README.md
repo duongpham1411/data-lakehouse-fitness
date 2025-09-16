@@ -20,17 +20,20 @@ Mục tiêu:
 
 ---
 
-## 📂 Cấu trúc thư mục:
+## 📂 Cấu trúc thư mục
+
 data-lakehouse-fitness/
-│── data/
-│ ├── raw/ # Dữ liệu gốc (CSV)
-│ ├── processed/ # Dữ liệu đã xử lý (Parquet/Delta)
 │
-│── notebooks/ # Notebook Jupyter/PySpark cho EDA & demo
-│── scripts/ # ETL scripts (Python + PySpark)
-│── reports/ # Báo cáo, hình ảnh, kết quả
-│── requirements.txt # Danh sách thư viện Python
-│── README.md # Tài liệu mô tả dự án
+├── data/ # Dữ liệu
+│ ├── raw/ # Dữ liệu gốc (CSV từ Kaggle)
+│ └── processed/ # Dữ liệu đã xử lý (Parquet / Delta)
+│
+├── notebooks/ # Jupyter/PySpark notebooks cho EDA & demo
+├── scripts/ # ETL scripts (Python + PySpark)
+├── reports/ # Báo cáo, hình ảnh, kết quả
+│
+├── requirements.txt # Danh sách thư viện Python cần thiết
+└── README.md # Tài liệu mô tả dự án
 
 ---
 
