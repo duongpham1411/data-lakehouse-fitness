@@ -1,57 +1,90 @@
 # Data Lakehouse for Fitness Classification Analytics
 
-## 📌 Giới thiệu
-Đồ án tốt nghiệp: **Xây dựng hệ thống Data Lakehouse phục vụ phân tích dữ liệu phân loại thể chất**  
-(*Design and Implementation of a Data Lakehouse for Fitness Classification Data Analytics*)  
+A graduation thesis project focused on designing and implementing a modern **Data Lakehouse** architecture for fitness data analytics, classification, and reporting.
 
-Mục tiêu:
-- Xây dựng pipeline Data Lakehouse (ingestion → transform → lưu trữ → phân tích).
-- Sử dụng dataset **Fitness Classification (Kaggle)**.
-- Trực quan hóa kết quả bằng dashboard (Power BI hoặc Apache Superset).
+This project demonstrates an end-to-end analytics workflow, from raw data ingestion to transformed analytical datasets and dashboard-ready outputs, using technologies commonly applied in data engineering and analytics roles.
 
 ---
 
-## 🛠 Công nghệ sử dụng
-- **Apache Spark (PySpark)** – xử lý & transform dữ liệu.
-- **Delta Lake** – quản lý dữ liệu (ACID, schema, time travel).
-- **MinIO / AWS S3** – lưu trữ dữ liệu dạng object.
-- **Power BI / Apache Superset** – trực quan hóa dữ liệu.
-- **Python, SQL** – xử lý và phân tích dữ liệu.
+## Project Overview
+
+The goal of this project is to build a scalable and structured data platform for analyzing fitness classification data.
+
+Using the **Fitness Classification** dataset from Kaggle, the system is designed to:
+
+- ingest raw data into a centralized storage layer,
+- clean and transform the data for analysis,
+- organize data into structured layers,
+- support downstream reporting and visualization,
+- and provide a foundation for machine learning-based classification tasks.
+
+This project reflects practical concepts from **data engineering**, **data analytics**, and **modern Lakehouse architecture**.
 
 ---
 
-## 📂 Cấu trúc thư mục
+## Objectives
 
+- Build an end-to-end **Data Lakehouse pipeline** for fitness classification analytics.
+- Apply a layered data architecture for better data quality and usability.
+- Process and transform data using **PySpark** and **SQL**.
+- Store analytical data in modern formats such as **Parquet** and **Delta Lake**.
+- Prepare data for dashboarding with **Power BI** or **Apache Superset**.
+- Support future extensions such as predictive analytics and machine learning.
+
+---
+
+## Architecture Concept
+
+The project follows a layered data architecture inspired by the **Bronze - Silver - Gold** pattern:
+
+- **Bronze Layer**: raw ingested data from source files
+- **Silver Layer**: cleaned, standardized, and validated data
+- **Gold Layer**: business-ready analytical datasets for reporting and modeling
+
+This approach improves data reliability, traceability, and reusability across analytics workflows.
+
+---
+
+## Tech Stack
+
+- **Python**
+- **SQL**
+- **Apache Spark (PySpark)**
+- **Delta Lake**
+- **Parquet**
+- **MinIO / AWS S3**
+- **Power BI / Apache Superset**
+- **Jupyter / Databricks Notebooks**
+
+---
+
+## Key Features
+
+- Raw data ingestion from source files
+- Data transformation and cleaning using PySpark
+- Structured storage with Parquet / Delta Lake
+- Layered modeling for analytics consumption
+- Exploratory data analysis in notebooks
+- Dashboard-ready outputs for business insights
+- Foundation for future machine learning integration
+
+---
+
+## Project Structure
+
+```text
 data-lakehouse-fitness/
 │
-├── data/ # Dữ liệu
-│ ├── raw/ # Dữ liệu gốc (CSV từ Kaggle)
-│ └── processed/ # Dữ liệu đã xử lý (Parquet / Delta)
+├── data/                    # Dataset files
+│   ├── raw/                 # Raw source data
+│   └── processed/           # Cleaned / transformed data
 │
-├── notebooks/ # Jupyter/PySpark notebooks cho EDA & demo
-├── scripts/ # ETL scripts (Python + PySpark)
-├── reports/ # Báo cáo, hình ảnh, kết quả
+├── notebooks/               # Notebooks for EDA, transformation, and experiments
+├── scripts/                 # Python / PySpark ETL scripts
+├── sql/                     # SQL queries for transformation or analysis
+├── reports/                 # Reports, screenshots, diagrams, and outputs
+├── docs/                    # Additional documentation
 │
-├── requirements.txt # Danh sách thư viện Python cần thiết
-└── README.md # Tài liệu mô tả dự án
-
----
-
-## 🚀 Cách chạy (local)
-1. Clone repo:
-   ```bash
-   git clone https://github.com/duongpham1411/data-lakehouse-fitness.git
-   cd data-lakehouse-fitness
-2. Tạo môi trường ảo và cài thư viện:
-    python -m venv venv
-    source venv/bin/activate   # hoặc venv\Scripts\activate trên Windows
-    pip install -r requirements.txt
-3. Chạy PySpark để test ingestion: pyspark
-4. Mở notebook trong notebooks/ để khám phá dữ liệu.
-
----
-
-## ✨ Kết quả dự kiến
-- Hệ thống Data Lakehouse cơ bản (batch data pipeline).
-- Dashboard hiển thị xu hướng và phân bố mức độ thể chất.
-- So sánh hiệu quả lưu trữ & truy vấn giữa dữ liệu CSV và Delta/Parquet.
+├── requirements.txt         # Python dependencies
+├── .gitignore               # Ignored files and folders
+└── README.md                # Project documentation
