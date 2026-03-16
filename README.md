@@ -45,6 +45,18 @@ This approach improves data reliability, traceability, and reusability across an
 
 ---
 
+## Architecture Workflow
+
+<p align="center">
+  <img src="docs/"Screenshot 2026-03-16 105922.png"g" alt="Lakehouse Workflow" width="850"/>
+</p>
+
+<p align="center">
+  <em>Figure: End-to-end workflow of the Data Lakehouse pipeline for ingestion, transformation, labeling, model inference, and BI serving.</em>
+</p>
+
+---
+
 ## Tech Stack
 
 - **Python**
