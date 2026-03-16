@@ -48,7 +48,7 @@ This approach improves data reliability, traceability, and reusability across an
 ## Architecture Workflow
 
 <p align="center">
-  <img src=""Screenshot 2026-03-16 105922.png"g" alt="Lakehouse Workflow" width="850"/>
+  <img src="Screenshot%202026-03-16%20105922.png" alt="Lakehouse Workflow" width="850"/>
 </p>
 
 <p align="center">
